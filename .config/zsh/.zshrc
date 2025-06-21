@@ -42,9 +42,10 @@ HISTCONTROL=ignoreboth # consecutive duplicates & commands starting with space a
 
 
 # Configure prompt
-fpath+=($ZDOTDIR/functions/pure)
-autoload -U promptinit && promptinit
-prompt pure
+#fpath+=($ZDOTDIR/functions/pure)
+#autoload -U promptinit && promptinit
+#prompt pure
+eval "$(starship init zsh)"
 
 
 # fzf setup
@@ -65,6 +66,7 @@ bindkey '^R' fzf-history-widget
 if [[ -f "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
     source "$ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
+source "$ZDOTDIR/plugins/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh"
 
 ## zsh-autosuggestions (fish-like autosuggestions)
 if [[ -f "$ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
