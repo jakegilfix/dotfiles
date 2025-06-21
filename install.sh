@@ -18,10 +18,11 @@ which fish && sudo usermod -s $(which fish) jakegilfix
 # Create symlinks to dotfiles
 ln -s "$HOME/.dotfiles/.config" "$HOME/.config"
 ln -s "$HOME/.dotfiles/.zprofile" "$HOME/.zprofile"
+ln -s "$HOME/.dotfiles/.vim" "$HOME/.vim"
 ln -s "$HOME/.dotfiles/.vimrc" "$HOME/.vimrc"
 
 # Install starship (prompt)
-curl -sS https://starship.rs/install.sh | sudo sh | y
+yes | sudo sh $(curl -sS https://starship.rs/install.sh)
 
 # Install `eza`
 sudo mkdir -p /etc/apt/keyrings
