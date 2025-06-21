@@ -9,6 +9,7 @@ sudo apt install -y zsh bat fzf fish zoxide
 
 # Alias bat (wth is batcat?)
 sudo ln -s /usr/bin/batcat /usr/bin/bat
+bat cache --build
 
 # Set default shell to fish
 which fish && sudo chsh -s $(which fish) affirm
@@ -17,9 +18,10 @@ which fish && sudo usermod -s $(which fish) jakegilfix
 # Create symlinks to dotfiles
 ln -s "$HOME/.dotfiles/.config" "$HOME/.config"
 ln -s "$HOME/.dotfiles/.zprofile" "$HOME/.zprofile"
+ln -s "$HOME/.dotfiles/.vimrc" "$HOME/.vimrc"
 
 # Install starship (prompt)
-curl -sS https://starship.rs/install.sh | sudo sh
+curl -sS https://starship.rs/install.sh | sudo sh | y
 
 # Install `eza`
 sudo mkdir -p /etc/apt/keyrings
