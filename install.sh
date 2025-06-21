@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y zsh bat fzf fish
+sudo apt install -y zsh bat fzf fish zoxide
 
 sudo chsh -s $(which zsh) affirm
 sudo chsh -s $(which zsh) jakegilfix
