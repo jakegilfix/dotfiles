@@ -58,7 +58,8 @@ style = "bold overlay0"
 disabled = true
 
 [hostname]
-ssh_symbol = " "
+format="[$hostname]($style) in "
+style="bold lavender"
 
 [java]
 symbol = " "
@@ -81,6 +82,11 @@ symbol = "󰏗 "
 [python]
 symbol = " "
 disabled = true
+
+[username]
+format = "[](bold lavender) [$user]($style) on "
+style_user = "bold rosewater"
+style_root = "bold red"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
