@@ -48,8 +48,8 @@ prompt pure
 
 
 # fzf setup
-#source <(fzf --zsh) # allow for fzf history widget
-fzf --zsh | source # allow for fzf history widget
+source <(fzf --zsh) # allow for fzf history widget
+#fzf --zsh | source # allow for fzf history widget
 
 
 # Key bindings
