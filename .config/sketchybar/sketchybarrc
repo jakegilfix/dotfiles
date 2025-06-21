@@ -1,0 +1,115 @@
+# Import user-defined colors variables:
+source "$CONFIG_DIR/colors.sh"
+
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+
+sketchybar --bar position=top   \
+                 height=28      \
+                 blur_radius=30 \
+                 #color=$CRUST
+
+##### Changing Defaults #####
+# We now change some default values, which are applied to all further items.
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+
+default=(
+  padding_left=4
+  padding_right=4
+  icon.font="SF Pro:Semibold:12.0"
+  label.font="SF Pro:Bold:12.0"
+  icon.color=$TEXT
+  label.color=$TEXT
+  icon.padding_left=4
+  icon.padding_right=4
+  label.padding_left=4
+  label.padding_right=4
+)
+sketchybar --default "${default[@]}"
+
+# -- Left Side Items --
+# SPACE_SIDS=(1 2 3 4 5 6 7 8 9 10)
+#
+#for sid in "${SPACE_SIDS[@]}"
+#do
+#  sketchybar --add space space.$sid left                                    \
+#             --set space.$sid space=$sid                                    \
+#                              icon=$sid                                     \
+#                              icon.padding_right=0                          \
+#                              icon.height=28                                \
+#                              label.padding_right=0                         \
+#                              label.y_offset=-1                             \
+#                              script="$PLUGIN_DIR/space.sh"              
+#done
+sketchybar --add event aerospace_workspace_change
+
+for sid in $(aerospace list-workspaces --all); do
+    sketchybar --add item space.$sid left \
+        --subscribe space.$sid aerospace_workspace_change \
+        --set space.$sid \
+        background.color=0x44ffffff \
+        background.height=28 \
+        background.drawing=off \
+        icon.padding_left=0 \
+        icon.padding_right=0 \
+        label.padding_left=2 \
+        label.padding_right=2 \
+        label="$sid" \
+        click_script="aerospace workspace $sid" \
+        script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+done
+
+sketchybar --add item cpu left           \
+           --set cpu update_freq=2       \
+                     icon=􀧓             \
+                     script="$PLUGIN_DIR/cpu.sh"
+
+sketchybar --add item media left                     \
+           --set media label.max_chars=30            \
+                       scroll_texts=on               \
+                       icon=􀑪                       \
+                       icon.color=$LAVENDER          \
+                       script="$PLUGIN_DIR/media.sh" \
+           --subscribe media media_change
+
+# -- Center Items --
+sketchybar --add item front_app center                                  \
+           --set front_app script="$PLUGIN_DIR/front_app.sh"            \
+                           icon.font="sketchybar-app-font:Regular:12.5" \
+           --subscribe front_app front_app_switched
+
+# -- Right Side Items --
+ sketchybar --add item calendar right      \
+            --set calendar icon=􀧞         \
+                           padding_right=0 \
+                           updates=on      \
+                           update_freq=1   \
+                           script="$PLUGIN_DIR/calendar.sh"
+
+sketchybar --add item volume right                     \
+           --set volume script="$PLUGIN_DIR/volume.sh" \
+           --subscribe volume volume_change
+
+sketchybar --add item battery right                      \
+           --set battery update_freq=120                 \
+                         script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change
+
+#source $ITEM_DIR/calendar.sh
+
+
+# Apply all the settings above:
+sketchybar --update

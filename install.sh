@@ -1,5 +1,9 @@
 #!/bin/bash
 
-apt install -y zsh bat
+sudo apt install -y zsh bat fzf
 
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) affirm
+sudo chsh -s $(which zsh) jakegilfix
+
+ln -s "$HOME/.dotfiles/.config" "$HOME/.config"
+ln -s "$HOME/.dotfiles/.zprofile" "$HOME/.zprofile"
