@@ -1,0 +1,60 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export KIBANA_APP_LOGS:https\x3a//kibana\x2eaffirm\x2dkeyhole\x2ecom/s/care\x2dengineering/app/discover\x23/\x3f_g\x3d\x28filters\x3a\x21\x28\x29\x2crefreshInterval\x3a\x28pause\x3a\x21t\x2cvalue\x3a60000\x29\x2ctime\x3a\x28from\x3anow\x2d15h\x2cto\x3anow\x29\x29\x26_a\x3d\x28columns\x3a\x21\x28message\x2clog\x2elogger\x2clog\x2elevel\x29\x2cfilters\x3a\x21\x28\x29\x2cindex\x3a\x2704b73383\x2d7da3\x2d5765\x2d82c0\x2d39f97daffdfa\x27\x2cinterval\x3aauto\x2cquery\x3a\x28language\x3akuery\x2cquery\x3a\x27\x27\x29\x2crowsPerPage\x3a500\x2csort\x3a\x21\x28\x21\x28\x27\x40timestamp\x27\x2cdesc\x29\x29\x29
+SETUVAR --export KIBANA_REQUEST_LOGS:https\x3a//kibana\x2eaffirm\x2dkeyhole\x2ecom/s/care\x2dengineering/app/discover\x23/\x3f_g\x3d\x28filters\x3a\x21\x28\x29\x2crefreshInterval\x3a\x28pause\x3a\x21t\x2cvalue\x3a60000\x29\x2ctime\x3a\x28from\x3anow\x2d15m\x2cto\x3anow\x29\x29\x26_a\x3d\x28columns\x3a\x21\x28url\x2epath\x2chttp\x2eresponse\x2estatus_code\x2chttp\x2erequest\x2eheaders\x2ex\x2drequest\x2did\x29\x2cfilters\x3a\x21\x28\x29\x2cindex\x3a\x2782c7671b\x2db865\x2d546a\x2d95dd\x2d00999163bb58\x27\x2cinterval\x3aauto\x2cquery\x3a\x28language\x3akuery\x2cquery\x3a\x27\x27\x29\x2csort\x3a\x21\x28\x21\x28\x27\x40timestamp\x27\x2cdesc\x29\x29\x29
+SETUVAR --export PYENV_ROOT:/Users/jake\x2egilfix/\x2epyenv
+SETUVAR __fish_initialized:3400
+SETUVAR _fisher_jorgebucaran_2F_nvm_2E_fish_files:\x7e/\x2econfig/fish/functions/_nvm_index_update\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_list\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_activate\x2efish\x1e\x7e/\x2econfig/fish/functions/_nvm_version_deactivate\x2efish\x1e\x7e/\x2econfig/fish/functions/nvm\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/nvm\x2efish\x1e\x7e/\x2econfig/fish/completions/nvm\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/nvm\x2efish
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR fish_color_autosuggestion:6c7086
+SETUVAR fish_color_cancel:f38ba8
+SETUVAR fish_color_command:89b4fa
+SETUVAR fish_color_comment:7f849c
+SETUVAR fish_color_cwd:f9e2af
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:fab387
+SETUVAR fish_color_error:f38ba8
+SETUVAR fish_color_escape:eba0ac
+SETUVAR fish_color_gray:6c7086
+SETUVAR fish_color_hg_added:green
+SETUVAR fish_color_hg_clean:green
+SETUVAR fish_color_hg_copied:magenta
+SETUVAR fish_color_hg_deleted:red
+SETUVAR fish_color_hg_dirty:red
+SETUVAR fish_color_hg_modified:yellow
+SETUVAR fish_color_hg_renamed:magenta
+SETUVAR fish_color_hg_unmerged:red
+SETUVAR fish_color_hg_untracked:yellow
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:89b4fa
+SETUVAR fish_color_host_remote:a6e3a1
+SETUVAR fish_color_keyword:f38ba8
+SETUVAR fish_color_normal:cdd6f4
+SETUVAR fish_color_operator:f5c2e7
+SETUVAR fish_color_option:a6e3a1
+SETUVAR fish_color_param:f2cdcd
+SETUVAR fish_color_quote:a6e3a1
+SETUVAR fish_color_redirection:f5c2e7
+SETUVAR fish_color_search_match:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_selection:\x2d\x2dbackground\x3d313244
+SETUVAR fish_color_status:f38ba8
+SETUVAR fish_color_user:94e2d5
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:\x1d
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_background:
+SETUVAR fish_pager_color_completion:cdd6f4
+SETUVAR fish_pager_color_description:6c7086
+SETUVAR fish_pager_color_prefix:f5c2e7
+SETUVAR fish_pager_color_progress:6c7086
+SETUVAR fish_pager_color_secondary_background:
+SETUVAR fish_pager_color_secondary_completion:
+SETUVAR fish_pager_color_secondary_description:
+SETUVAR fish_pager_color_secondary_prefix:
+SETUVAR fish_pager_color_selected_background:
+SETUVAR fish_pager_color_selected_completion:
+SETUVAR fish_pager_color_selected_description:
+SETUVAR fish_pager_color_selected_prefix:
+SETUVAR fish_user_paths:/Users/jake\x2egilfix/\x2envm\x1e/opt/homebrew/sbin\x1e/opt/homebrew/bin\x1e/Users/jake\x2egilfix/\x2econfig/tmux/plugins/t\x2dsmart\x2dtmux\x2dsession\x2dmanager/bin\x1e/Users/jake\x2egilfix/\x2epyenv\x1e/usr/local/opt/mysql\x405\x2e7/bin\x1e/usr/local/opt/gnu\x2dgetopt/bin\x1e/Users/jake\x2egilfix/\x2epyenv/shims\x1e/Users/jake\x2egilfix/\x2efig/bin\x1e/Users/jake\x2egilfix/\x2elocal/bin\x1e/Users/jake\x2egilfix/\x2epyenv/bin
+SETUVAR nvm_default_version:20\x2e10\x2e0
