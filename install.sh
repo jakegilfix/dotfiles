@@ -22,7 +22,10 @@ ln -s "$HOME/.dotfiles/.vim" "$HOME/.vim"
 ln -s "$HOME/.dotfiles/.vimrc" "$HOME/.vimrc"
 
 # Install starship (prompt)
-yes | sudo sh $(curl -sS https://starship.rs/install.sh)
+curl -sS https://starship.rs/install.sh > ./install_starship.sh \
+&& chmod 777 ./install_starship.sh \
+&& sudo ./install_starship.sh --yes \
+&& rm ./install_starship.sh
 
 # Install `eza`
 sudo mkdir -p /etc/apt/keyrings
